@@ -1,9 +1,9 @@
 /**
- * 暴露主页
+ * 主接口
  */
 
 module.exports = {
     get(req, res, next) {
-        res.send('暴露主页');
+        res.send('api 文档');
     }
 }
