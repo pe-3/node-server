@@ -4,8 +4,11 @@ const {getModules} = require('./utils');
 const fs = require('fs');
 
 const app = express();
+const res = require('./midware/res');
 
 app.use(express.json()); // 解析 JSON 数据
+app.use(res); // 接口返回标准函数
+
 
 // 获取所有暴露的路由
 const dirPath = join(__dirname, './routes');
